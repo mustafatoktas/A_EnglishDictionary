@@ -38,7 +38,7 @@ Bu Android uygulaması aratılan İngilizce kelimelerin anlam ve telaffuz bilgil
 Ekran görüntüleri uygulamanın v1.0.0 sürümünden alınmıştır. Yeni sürümlerde arayüz tamamen yada kısmi olarak değiştirilmiş olabilir.
 
 | ![Ekran Görüntüsü 1](./Readme%20Resources/Ekran%20Görüntüleri/Ekran%20Görüntüsü%201.png) | ![Ekran Görüntüsü 2](./Readme%20Resources/Ekran%20Görüntüleri/Ekran%20Görüntüsü%202.png) | ![Ekran Görüntüsü 3](./Readme%20Resources/Ekran%20Görüntüleri/Ekran%20Görüntüsü%203.png) |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |  --------------------------------------------------------------------------------------- |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | ![Ekran Görüntüsü 4](./Readme%20Resources/Ekran%20Görüntüleri/Ekran%20Görüntüsü%204.png) |                                                                                          |                                                                                          |
 
 
