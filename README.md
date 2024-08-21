@@ -27,7 +27,7 @@
 - **Kullanılan İzinler:** 
   - İnternet
 
-Bu Android uygulaması aratılan İngilizce kelimelerin anlam ve telaffuz bilgilerini
+Bu uygulama aratılan İngilizce kelimelerin anlam ve telaffuz bilgilerini
 [Dictionary API](https://dictionaryapi.dev) kullanarak kullanıcıya sunar.
 
 
