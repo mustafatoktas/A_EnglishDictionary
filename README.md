@@ -1,7 +1,7 @@
 <h1 align="center">English Dictionary</h1>
 
-<div align=center>
-  <img src="./Readme%20Resources/English Dictionary Logo.png" alt="Logo" width="120" heigh="120"/>
+<div align="center">
+  <img src="./Readme Resources/English Dictionary Logo.png" alt="Logo" width="120"/>
 </div>
 
 ## **İçindekiler**
@@ -16,16 +16,22 @@
 
 ![-----------------------------------------------------](./Readme%20Resources/Çizgi.png)
 
-<a href="https://github.com/mustafatoktas/W.BE_RepoVisitorCounterAPI" target="_blank"> <img src="https://toktasoft.com/api/github2/repo-visitor-counter.php?repo=zfuqan924thbgcv&show_repo_name=1&show_date=1&show_brand=0" alt="Repo Visitor Counter"/> </a>
-
-
-![-----------------------------------------------------](./Readme%20Resources/Çizgi.png)
-
 ## Uygulama Hakkında
 
-- **Tür:** Android Mobil Uygulama
-- **Kullanılan İzinler:** 
-  - İnternet
+<table>
+  <tr>
+    <th style="text-align: left; font-weight: bold;">İşletim Sistemi</th>
+    <td style="text-align: left;">Android</td>
+  </tr>
+  <tr>
+    <th style="text-align: left; font-weight: bold;">Uygulama Türü</th>
+    <td style="text-align: left;">Mobil</td>
+  </tr>
+  <tr>
+    <th style="text-align: left; font-weight: bold;">Kullanılan İzinler</th>
+    <td style="text-align: left;">INTERNET</td>
+  </tr>
+</table>
 
 Bu uygulama aratılan İngilizce kelimelerin anlam ve telaffuz bilgilerini
 [Dictionary API](https://dictionaryapi.dev) kullanarak kullanıcıya sunar.
@@ -35,7 +41,7 @@ Bu uygulama aratılan İngilizce kelimelerin anlam ve telaffuz bilgilerini
 
 ## Ekran Görüntüleri
 
-Ekran görüntüleri uygulamanın v1.0.0 sürümünden alınmıştır. Yeni sürümlerde arayüz tamamen yada kısmi olarak değiştirilmiş olabilir.
+Ekran görüntüleri uygulamanın `v1.0.0` sürümünden alınmıştır. Yeni sürümlerde arayüz tamamen yada kısmi olarak değiştirilmiş olabilir.
 
 | ![Ekran Görüntüsü 1](./Readme%20Resources/Ekran%20Görüntüleri/Ekran%20Görüntüsü%201.png) | ![Ekran Görüntüsü 2](./Readme%20Resources/Ekran%20Görüntüleri/Ekran%20Görüntüsü%202.png) | ![Ekran Görüntüsü 3](./Readme%20Resources/Ekran%20Görüntüleri/Ekran%20Görüntüsü%203.png) |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -76,7 +82,9 @@ Ekran görüntüleri uygulamanın v1.0.0 sürümünden alınmıştır. Yeni sür
   [lisans hakları](https://www.gnu.org/licenses/gpl-3.0.html) kapsamında geliştirme
   yapabilmek için [git](https://git-scm.com) yüklü bir bilgisayarda projeyi indirmek
   istediğiniz dosya yoluna gidip terminalde
-  `git clone https://github.com/mustafatoktas/A_EnglishDictionary.git`
+  ```
+  git clone https://github.com/mustafatoktas/A_EnglishDictionary.git
+  ```
   komutunu çalıştırabilirsiniz.
 
 - [Releases](https://github.com/mustafatoktas/A_EnglishDictionary/releases) sayfasına gidip
@@ -85,26 +93,36 @@ Ekran görüntüleri uygulamanın v1.0.0 sürümünden alınmıştır. Yeni sür
 
 ![-----------------------------------------------------](./Readme%20Resources/Çizgi.png)
 
+<a href="https://github.com/mustafatoktas/W.BE_RepoVisitorCounterAPI" target="_blank"> <img src="https://toktasoft.com/api/github2/repo-visitor-counter.php?repo=zfuqan924thbgcv&show_repo_name=1&show_date=1&show_brand=0" alt="Repo Visitor Counter"/> </a>
+
+<a href="https://buymeacoffee.com/mustafatoktas" target="_blank"> <img src="./Readme Resources/İletişim/Buy Me a Coffee.png" alt="Buy Me a Coffee" height="64"/> </a>
+
+
+![-----------------------------------------------------](./Readme%20Resources/Çizgi.png)
+
 ## Lisans
-    Copyright 2024 Mustafa TOKTAŞ
 
-    Licensed under the GNU General Public License v3.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+```
+Copyright 2024 Mustafa TOKTAŞ
 
-        https://www.gnu.org/licenses/gpl-3.0.html
+Licensed under the GNU General Public License v3.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+    https://www.gnu.org/licenses/gpl-3.0.html
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
 
 
 ![-----------------------------------------------------](./Readme%20Resources/Çizgi.png)
 
 ## İletişim
 
-<a href="mailto:info@mustafatoktas.com"              target="_blank"> <img src="./Readme Resources/İletişim/Mail.png"     alt="Mail"     width="64" heigh="64"/> </a>
-<a href="https://t.me/mustafatoktas00"               target="_blank"> <img src="./Readme Resources/İletişim/Telegram.png" alt="Telegram" width="64" heigh="64"/> </a>
-<a href="https://www.linkedin.com/in/mustafatoktas/" target="_blank"> <img src="./Readme Resources/İletişim/LinkedIn.png" alt="LinkedIn" width="64" heigh="64"/> </a>
+<a href="mailto:info@mustafatoktas.com"              target="_blank"> <img src="./Readme Resources/İletişim/Mail.png"     alt="Mail"     width="64"/> </a>
+<a href="https://t.me/mustafatoktas00"               target="_blank"> <img src="./Readme Resources/İletişim/Telegram.png" alt="Telegram" width="64"/> </a>
+<a href="https://www.linkedin.com/in/mustafatoktas/" target="_blank"> <img src="./Readme Resources/İletişim/LinkedIn.png" alt="LinkedIn" width="64"/> </a>
