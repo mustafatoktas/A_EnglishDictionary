@@ -65,9 +65,9 @@ Ekran görüntüleri uygulamanın `v1.0.0` sürümünden alınmıştır. Yeni s�
 - `Splash Screen`
 - `Serialization`
 
-[Uygulama seviyesi build.gradle.kts](./app/build.gradle.kts)
+[Uygulama Modülü build.gradle.kts](./app/build.gradle.kts)
 
-[Proje seviyesi build.gradle.kts](./build.gradle.kts)
+[Kök Dizin build.gradle.kts](./build.gradle.kts)
 
 [libs.versions.toml](./gradle/libs.versions.toml)
 
