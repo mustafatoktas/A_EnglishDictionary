@@ -4,7 +4,7 @@
   <img src="./Readme Resources/English Dictionary Logo.png" alt="Logo" width="120"/>
 </div>
 
-## **İçindekiler**
+## İçindekiler
 
 - [Uygulama Hakkında](#uygulama-hakkında)
 - [Ekran Görüntüleri](#ekran-görüntüleri)
@@ -59,6 +59,7 @@ Ekran görüntüleri uygulamanın `v1.0.0` sürümünden alınmıştır. Yeni s�
 - `Gson`
 - `Retrofit`
 - `Hilt`
+- `Coil`
 - `Navigation`
 - `Data Store`
 - `Lifecycle`

@@ -1,6 +1,6 @@
 package com.mustafatoktas.englishdictionary.presentation.ayarlar
 
-import android.app.Application
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -29,6 +29,9 @@ import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.mustafatoktas.englishdictionary.R
+import com.mustafatoktas.englishdictionary.presentation.ayarlar.components.AyarlarToolbar
+import com.mustafatoktas.englishdictionary.presentation.ayarlar.components.AyarlariSifirlaAlertDialog
+import com.mustafatoktas.englishdictionary.presentation.ayarlar.components.TemaSecimScreen
 import com.mustafatoktas.englishdictionary.presentation.ayarlar.viewmodel.AyarlarEvent
 import com.mustafatoktas.englishdictionary.presentation.ayarlar.viewmodel.AyarlarViewModel
 
@@ -36,7 +39,7 @@ import com.mustafatoktas.englishdictionary.presentation.ayarlar.viewmodel.Ayarla
 fun AyarlarScreen(
     navHostController: NavHostController,
     viewModel: AyarlarViewModel = hiltViewModel(),
-    application: Application,
+    context: Context,
 ) {
     val state by viewModel.state.collectAsState()
     var temaDialogGoster by remember { mutableStateOf(false) }
@@ -81,7 +84,7 @@ fun AyarlarScreen(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        text = application.getString(R.string.theme),
+                        text = context.getString(R.string.theme),
                         style = MaterialTheme.typography.titleLarge,
                         modifier = Modifier
                             .weight(1f)
@@ -108,7 +111,7 @@ fun AyarlarScreen(
                 verticalArrangement = Arrangement.Center,
             ) {
                 Text(
-                    text = application.getString(R.string.new_settings_and_features_will_be_added_in_future_versions),
+                    text = context.getString(R.string.new_settings_and_features_will_be_added_in_future_versions),
                     color = Color.Gray,
                     textAlign = TextAlign.Center,
                 )

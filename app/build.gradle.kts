@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -15,8 +16,8 @@ android {
         applicationId = "com.mustafatoktas.englishdictionary"
         minSdk = 27
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -45,7 +46,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+        kotlinCompilerExtensionVersion = "1.6.8"
     }
     packaging {
         resources {
@@ -107,4 +108,7 @@ dependencies {
 
     //serialization (navigasyon için gerekli)
     implementation(libs.kotlinx.serialization.json)
+
+    //coil (image cashing)
+    implementation(libs.coil.compose)
 }

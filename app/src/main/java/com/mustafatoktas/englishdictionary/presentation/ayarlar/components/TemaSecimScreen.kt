@@ -1,24 +1,14 @@
-package com.mustafatoktas.englishdictionary.presentation.ayarlar
+package com.mustafatoktas.englishdictionary.presentation.ayarlar.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Adjust
-import androidx.compose.material.icons.outlined.ArrowBackIosNew
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -30,64 +20,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mustafatoktas.englishdictionary.common.Constants
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun AyarlarToolbar(
-    geriTiklandi : () -> Unit,
-    ayarlariSifirlaTiklandi : () -> Unit,
-) {
-    TopAppBar(
-        title = {
-            Text(text = "Settings")
-        },
-        colors = TopAppBarDefaults.topAppBarColors(
-            //containerColor = MaterialTheme.colorScheme.primary,
-            //actionIconContentColor = MaterialTheme.colorScheme.onPrimary,
-        ),
-        navigationIcon = {
-            IconButton(
-                onClick = geriTiklandi,
-            ) {
-                Icon(imageVector = Icons.Outlined.ArrowBackIosNew, contentDescription = "Back Icon")
-            }
-        },
-        actions = {
-            IconButton(
-                onClick = ayarlariSifirlaTiklandi
-            ) {
-                Icon(imageVector = Icons.Outlined.Adjust, contentDescription = "Default Settings")
-            }
-        }
-    )
-}
-
-@Composable
-fun AyarlariSifirlaAlertDialog(
-    dismissTiklandi : () -> Unit,
-    confirmTiklandi : () -> Unit,
-) {
-    AlertDialog(
-        onDismissRequest = dismissTiklandi,
-        dismissButton = {
-            Button(
-                onClick = dismissTiklandi
-            ) {
-                Text(text = "Cancel")
-            }
-        },
-        confirmButton = {
-            Button(
-                onClick = confirmTiklandi
-            ) {
-                Text(text = "Confirm")
-            }
-        },
-        title = {
-            Text(text = "Are you sure you want to reset all settings?")
-        }
-    )
-}
 
 @Composable
 fun TemaSecimScreen(

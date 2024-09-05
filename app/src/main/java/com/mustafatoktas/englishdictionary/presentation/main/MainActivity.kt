@@ -8,13 +8,14 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import com.mustafatoktas.englishdictionary.common.Constants
 import com.mustafatoktas.englishdictionary.common.MyDataStore
 import com.mustafatoktas.englishdictionary.presentation.navigation.EnglishDictionaryNavHost
 import com.mustafatoktas.englishdictionary.presentation.navigation.Screen
-import com.mustafatoktas.englishdictionary.ui.EnglishDictionaryTheme
+import com.mustafatoktas.englishdictionary.presentation.theme.EnglishDictionaryTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -40,11 +41,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navHostController = rememberNavController()
                     val startDestination = Screen.AnasayfaScreen
+                    val context = LocalContext.current
 
                     EnglishDictionaryNavHost(
                         startDestination = startDestination,
                         navHostController = navHostController,
-                        application = this.application,
+                        context =context,
                     )
                 }
             }

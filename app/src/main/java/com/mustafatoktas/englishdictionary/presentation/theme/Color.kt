@@ -1,4 +1,4 @@
-package com.mustafatoktas.englishdictionary.ui
+package com.mustafatoktas.englishdictionary.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

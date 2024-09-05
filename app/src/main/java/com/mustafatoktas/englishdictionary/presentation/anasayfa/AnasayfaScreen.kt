@@ -1,5 +1,6 @@
 package com.mustafatoktas.englishdictionary.presentation.anasayfa
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
@@ -35,141 +36,42 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.mustafatoktas.englishdictionary.presentation.anasayfa.viewmodel.AnasayfaEvent
 import com.mustafatoktas.englishdictionary.presentation.anasayfa.viewmodel.AnasayfaViewModel
 import androidx.navigation.NavHostController
+import com.mustafatoktas.englishdictionary.R
+import com.mustafatoktas.englishdictionary.common.CihazDurumu
+import com.mustafatoktas.englishdictionary.presentation.anasayfa.components.AnasayfaContent
+import com.mustafatoktas.englishdictionary.presentation.anasayfa.components.AnasayfaToolbar
+import com.mustafatoktas.englishdictionary.presentation.anasayfa.components.BarColor
+import com.mustafatoktas.englishdictionary.presentation.anasayfa.components.OtherContent
+import com.mustafatoktas.englishdictionary.presentation.anasayfa.components.WordResult
 import com.mustafatoktas.englishdictionary.presentation.navigation.Screen
 
 
 @Composable
 fun AnasayfaScreen(
     navHostController: NavHostController,
+    context: Context,
     viewModel: AnasayfaViewModel = hiltViewModel()
 ) {
 
     val state by viewModel.state.collectAsState()
-    var alertDialogGoster by remember { mutableStateOf(false) }
-    val context = LocalContext.current
 
-    BarColor()
-
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        topBar = {
-            AnasayfaToolbar(
-                state = state,
-                viewModel = viewModel,
-                aramaTiklandi = {
-                    viewModel.handleEvent(AnasayfaEvent.OnSearchClick)
-                },
-                ayarlarTiklandi = {
-                    navHostController.navigate(Screen.AyarlarScreen)
-                },
-                checkForUpdatesTiklandi = {
-                    alertDialogGoster = true
-                    viewModel.handleEvent(AnasayfaEvent.OnCheckForUpdatesClick)
-                }
-            )
-        },
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(top = it.calculateTopPadding())
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize(),
-            ) {
-
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(100.dp)
-                        .background(MaterialTheme.colorScheme.background)
-                        .padding(horizontal = 30.dp),
-                ) {
-                    state.wordItem?.let { wordItem ->
-
-                        Spacer(modifier = Modifier.height(20.dp))
-
-                        Text(
-                            text = wordItem.word,
-                            fontSize = 30.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = MaterialTheme.colorScheme.primary
-                        )
-
-                        Spacer(modifier = Modifier.height(8.dp))
-
-                        Text(
-                            text = wordItem.phonetic,
-                            fontSize = 17.sp,
-                            color = MaterialTheme.colorScheme.onBackground
-                        )
-
-                        Spacer(modifier = Modifier.height(20.dp))
-                    }
-                }
-
-                Box(
-                    modifier = Modifier
-                        .padding(top = 110.dp)
-                        .fillMaxSize()
-                        .clip(
-                            RoundedCornerShape(
-                                topStart = 50.dp,
-                                topEnd = 50.dp
-                            )
-                        )
-                        .background(
-                            MaterialTheme.colorScheme.secondaryContainer.copy(0.7f)
-                        ),
-                ) {
-                    if (state.isLoading) {
-                        CircularProgressIndicator(
-                            modifier = Modifier
-                                .size(80.dp)
-                                .align(Alignment.Center),
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                    } else {
-                        state.wordItem?.let { wordItem ->
-                            WordResult(wordItem)
-                        }
-                    }
-                }
-            }
-        }
-        if (alertDialogGoster)
-            AlertDialog(
-                onDismissRequest = {},
-                title = {
-                    Text(text = "Update")
-                },
-                text = {
-                    Text(text = state.guncellemeMesaji)
-                },
-                dismissButton = {
-                    if (state.guncellemeVarMi)
-                        Button(
-                            onClick = {
-                                alertDialogGoster = false
-                            }
-                        ) {
-                            Text(text = "Later")
-                        }
-                },
-                confirmButton = {
-                    Button(
-                        onClick = {
-                            alertDialogGoster = false
-                            if (state.guncellemeVarMi) {
-                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(state.guncellemeAdresi))
-                                context.startActivity(intent)
-                            }
-                        }
-                    ) {
-                        Text(text = if (state.guncellemeVarMi) "Update" else "OK")
-                    }
-                },
-            )
+    when (state.cihazDurumu) {
+        CihazDurumu.Rootlu -> OtherContent(
+            baslik = context.getString(R.string.root_tespit_edildi),
+            icerik = context.getString(R.string.root_icerigi),
+            resim = R.drawable.root,
+            context = context,
+        )
+        CihazDurumu.Emulator -> OtherContent(
+            baslik = context.getString(R.string.cihaz_bir_emulator_uzerinde_calisiyor),
+            icerik = context.getString(R.string.emulator_icerigi),
+            resim = R.drawable.emulator,
+            context = context,
+        )
+        CihazDurumu.Normal -> AnasayfaContent(
+            state = state,
+            viewModel = viewModel,
+            navHostController = navHostController
+        )
     }
 }
